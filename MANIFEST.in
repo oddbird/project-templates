@@ -1,0 +1,8 @@
+include AUTHORS.rst
+include CHANGES.rst
+include COPYING.txt
+include README.rst
+include TODO.rst
+
+recursive-include obc/project_templates/templates *
+recursive-exclude obc/project_templates/templates *~ *.pyc

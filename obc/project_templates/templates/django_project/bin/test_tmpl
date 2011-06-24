@@ -1,0 +1,4 @@
+#!/bin/bash
+
+coverage run manage.py test core
+coverage html --include='src/${package}/**/*.py' --omit='src/${package}/**/migrations/*','src/${package}/**/tests/*','src/${package}/**/tests.py'
