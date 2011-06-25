@@ -21,9 +21,9 @@ Requires `Paste`_ and `PasteScript`_.
 Installation
 ------------
 
-Install with ``pip``::
+Install with ``pip`` from your local checkout::
 
-    pip install obc-project-templates
+    pip install -e .
 
 
 Usage
