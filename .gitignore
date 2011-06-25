@@ -1,3 +1,4 @@
 dist/
 obc_project_templates.egg-info
 TAGS
+.tox
