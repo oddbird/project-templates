@@ -1,35 +1,24 @@
 // Imports -------------------------------------------------------------------
 
-@import defaults
+@import defaults/defaults
+@import media/xsmall
 
-// 992 Grid ------------------------------------------------------------------
-// (24*2em + 23*1em + 2em) = 73em = 1168px
-// 48px + 16px x 24px
+/* small ---------------------------------------------------------------------
+@media only screen and (min-width: 30em)
+  @import media/small
 
-$total-cols         : 24
-$col-width          : 2em
-$gutter-width       : 1em
-$side-gutter-width  : $gutter-width
+/* medium  -------------------------------------------------------------------
+@media only screen and (min-width: 48em)
+  @import media/medium
 
-/* Layout --------------------------------------------------------------
+/* large ---------------------------------------------------------------------
+@media only screen and (min-width: 62em)
+  @import media/large
 
-body > div
-  +container
-  +susy-grid-background
+/* xlarge --------------------------------------------------------------------
+@media only screen and (min-width: 86em)
+  @import media/xlarge
 
-header[role="banner"]
-  +full
-  +padding-leader
-
-div[role="main"]
-  +full
-  +pie-clearfix
-  +h-borders(1px,1,$base-font-size,dotted)
-
-footer[role="contentinfo"]
-  +full
-  +adjust-font-size-to(12px)
-  +trailer(1,12px)
-  font-style: italic
-  small
-    font: inherit
+// retina --------------------------------------------------------------------
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+    @import media/retina

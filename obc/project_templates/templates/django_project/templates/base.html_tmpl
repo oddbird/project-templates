@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-{% load compress %}
-
-<!--[if lt IE 7 ]>              <html class="no-js ie6" lang="en" dir="ltr">   <![endif]-->
-<!--[if IE 7 ]>                 <html class="no-js ie7" lang="en" dir="ltr">   <![endif]-->
-<!--[if IE 8 ]>                 <html class="no-js ie8" lang="en" dir="ltr">   <![endif]-->
-<!--[if IE 9 ]>                 <html class="no-js ie9" lang="en" dir="ltr">   <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->  <html class="no-js" lang="en" dir="ltr">       <!--<![endif]-->
-
+{% load compress bits %}
+<!--[if lte IE 8 ]>             <html class="no-js ie" lang="en" dir="ltr">   <![endif]-->
+<!--[if IE 9 ]>                 <html class="no-js ie9" lang="en" dir="ltr">  <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->  <html class="no-js" lang="en" dir="ltr">      <!--<![endif]-->
 <head>
   <meta charset="utf-8" />
 
@@ -50,10 +46,14 @@
   <link href="http://universal-ie6-css.googlecode.com/files/ie6.1.0.css" media="screen, projection" />
   <![endif]-->
 
-  <!--[if !IE 6]><!-->
+  <!--[if (IE 7)|(IE 8)]>
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/ie.css" />
+  <![endif]-->
+
+  <!--[if gte IE 9]><!-->
   {% block styles %}
   {% compress css %}
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" />
   {% endcompress %}
   {% endblock styles %}
   <!--<![endif]-->
@@ -73,39 +73,9 @@
   {% block extrahead %}{% endblock %}
 </head>
 
-<body id="client-url" class="{% block bodyclasses %}{% endblock %}">
-
+<body id="${site_id}" class="{% block bodyclasses %}{% endblock %}">
 {% block body %}
-<div>
-{% block page %}
 
-  <header role="banner">
-    <h1><a href="/" rel="home">${verbose_name}</a></h1>
-  </header>
-
-  <div role="main">
-    {% block content %}
-
-    {% endblock %}
-  </div><!-- /~main -->
-
-  <footer role="contentinfo">
-    <div id="hcard-client-name" class="author vcard">
-      <small>copyright &copy; 2011</small>
-      <strong class="fn org">${verbose_name}</strong>
-      <div class="adr">
-        <span class="street-address">Street Address</span>,
-        <span class="locality">City</span>,
-        <span class="region">State/Province</span>
-        <span class="postal-code">Postal Code</span>
-      </div>
-      <div class="tel">(123)456-7890</div>
-      <div class="email">email@example.com</div>
-    </div>
-  </footer>
-
-{% endblock page %}
-</div>
 {% endblock body %}
 
 <!-- JavaScript -->

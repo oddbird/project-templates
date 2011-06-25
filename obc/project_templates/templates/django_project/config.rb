@@ -1,10 +1,6 @@
 # Compass CSS framework config file
 
 require 'susy'
-# require 'css-lightbox'
-# require 'css-slideshow'
-# require 'rgbapng'
-# require 'lemonade'
 # Require any additional compass plugins here.
 
 project_type = :stand_alone
