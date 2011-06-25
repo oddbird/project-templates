@@ -9,9 +9,9 @@
   </header>
 
   <div role="main">
-    {% block content %}
+    {% block maincontent %}
 
-    {% endblock %}
+    {% endblock maincontent %}
   </div><!-- /~main -->
 
   <footer role="contentinfo">
