@@ -56,7 +56,6 @@ class StaticDjangoAppTemplate(CurDirTemplate):
 class DjangoProjectTemplate(CurDirTemplate):
     vars = [
         var("verbose_name", "Verbose human-readable name of project"),
-        var("site_id", "Site ID")
     ]
 
     summary = "Template for creating a basic OddBird Django project."

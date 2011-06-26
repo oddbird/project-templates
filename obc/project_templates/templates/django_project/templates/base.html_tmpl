@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load compress bits %}
+{% load compress %}
 <!--[if lte IE 8 ]>             <html class="no-js ie" lang="en" dir="ltr">   <![endif]-->
 <!--[if IE 9 ]>                 <html class="no-js ie9" lang="en" dir="ltr">  <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->  <html class="no-js" lang="en" dir="ltr">      <!--<![endif]-->
@@ -73,7 +73,7 @@
   {% block extrahead %}{% endblock %}
 </head>
 
-<body id="${site_id}" class="{% block bodyclasses %}{% endblock %}">
+<body id="${package}" class="{% block bodyclasses %}{% endblock %}">
 {% block body %}
 
 {% endblock body %}
