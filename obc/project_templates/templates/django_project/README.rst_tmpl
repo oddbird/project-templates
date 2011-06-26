@@ -9,11 +9,11 @@ other Python projects on your system, create a virtualenv and activate
 it.  Then run ``bin/install-reqs`` to install the dependencies for
 this project into your Python environment.
 
-You'll probably need to create a ``${package}/settings/local.py`` file
+You'll probably need to create a ``src/${package}/settings/local.py`` file
 with some details of your local configuration, including, most likely,
 your database details (SQLite will be used by default).  See
-``${package}/settings_local.sample.py`` for a sample that can be
-copied to ``${package}/settings_local.py`` and modified.
+``src/${package}/settings_local.sample.py`` for a sample that can be
+copied to ``src/${package}/settings_local.py`` and modified.
 
 Once this configuration is done, you should be able to run
 ``./manage.py syncdb --migrate``, then ``./manage.py runserver`` and
@@ -34,10 +34,10 @@ authenticated pages over HTTP invites session hijacking
 attacks). Ideally, the non-HTTP URLs should redirect to the HTTPS
 version.
 
-``${project}/settings/prod.py`` should be used as the settings module in a
-production deployment in place of ``${project}/settings/default.py`` (set
-``DJANGO_SETTINGS_MODULE=${project}.settings.prod``). Site-specific overrides
-can still be placed in ``${project}/settings/local.py``.
+``src/${package}/settings/prod.py`` should be used as the settings module in a
+production deployment in place of ``src/${package}/settings/default.py`` (set
+``DJANGO_SETTINGS_MODULE=${package}.settings.prod``). Site-specific overrides
+can still be placed in ``src/${package}/settings/local.py``.
 
 You can run ``./manage.py checksecure`` to verify that settings are correctly
 configured for a secure deployment.
