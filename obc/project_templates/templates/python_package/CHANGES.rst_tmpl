@@ -1,0 +1,9 @@
+CHANGES
+=======
+
+#from datetime import date
+0.1.0 (#echo date.today().strftime("%Y.%m.%d") #)
+------------------
+
+* Initial release.
+

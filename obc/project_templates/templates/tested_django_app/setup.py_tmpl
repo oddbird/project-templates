@@ -1,0 +1,3 @@
+#set global $extraSetupKwargs = {"tests_require": '["Django>=1.2"]', "test_suite": '"runtests.runtests"'}
+
+#include $templates_dir + "/django_app/setup.py_tmpl"

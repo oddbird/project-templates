@@ -1,0 +1,3 @@
+#set global $packageData = ["static/" + $package + "/*.*"]
+
+#include $templates_dir + "/django_app/setup.py_tmpl"

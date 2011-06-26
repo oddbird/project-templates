@@ -1,0 +1,3 @@
+#set global $extraClassifiers = ["Programming Language :: Python", "Programming Language :: Python :: 2", "Programming Language :: Python :: 2.6", "Programming Language :: Python :: 2.7", "Framework :: Django"]
+
+#include $templates_dir + "/python_package/setup.py_tmpl"

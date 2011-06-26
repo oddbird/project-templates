@@ -1,0 +1,3 @@
+#include $templates_dir + "/python_package/+dot+gitignore_tmpl"
+.tox/
+htmlcov/

@@ -30,7 +30,6 @@ def get_package_data():
                 os.path.join(relative_path, fn) for fn in filenames
                 if not fn.endswith("~") and not fn.endswith(".pyc")
                 ])
-    print ret
     return {"obc.project_templates": ret}
 
 
@@ -51,6 +50,10 @@ setup(
     ],
     entry_points="""
         [paste.paster_create_template]
+        python_package=obc.project_templates.pastertemplates:PythonPackageTemplate
+        django_app=obc.project_templates.pastertemplates:DjangoAppTemplate
+        tested_django_app=obc.project_templates.pastertemplates:TestedDjangoAppTemplate
+        static_django_app=obc.project_templates.pastertemplates:StaticDjangoAppTemplate
         django_project=obc.project_templates.pastertemplates:DjangoProjectTemplate
         """,
     classifiers = [

@@ -1,0 +1,53 @@
+from os.path import join, dirname
+
+from setuptools import setup
+
+here = dirname(__file__)
+
+long_description = (open(join(here, "README.rst")).read() + "\n\n" +
+                    open(join(here, "CHANGES.rst")).read() + "\n\n" +
+                    open(join(here, "TODO.rst")).read())
+
+def get_version():
+    fh = open(join(here, "${package}", "__init__.py"))
+    try:
+        for line in fh.readlines():
+            if line.startswith("__version__ ="):
+                return line.split("=")[1].strip().strip('"')
+    finally:
+        fh.close()
+
+setup(
+    name="${project}",
+    version=get_version(),
+    description="${description}",
+    long_description=long_description,
+    author="${author_name}",
+    author_email="${author_email}",
+    url="{url}",
+    packages=["${package}"],
+#if $getVar("packageData", None)
+    package_data={
+        "${package}": [
+#for $pattern in $packageData
+            "${pattern}",
+#end for
+            ]
+        },
+#end if
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Environment :: Web Environment",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Operating System :: OS Independent",
+#for $classifier in $getVar("extraClassifiers", [])
+        "${classifier}",
+#end for
+    ],
+    zip_safe=False,
+#set $extraSetupKwargs = $getVar("extraSetupKwargs", {})
+#for $key in $extraSetupKwargs.keys()
+    ${key}=#echo $extraSetupKwargs[$key] #,
+#end for
+)
