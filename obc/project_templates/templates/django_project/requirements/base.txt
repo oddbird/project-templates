@@ -8,3 +8,4 @@ django-floppyforms==0.4.5
 django-classy-tags==0.3.0
 django-secure==0.1.0
 django-icanhaz==0.1.0
+django-html5accordion==0.1.1
