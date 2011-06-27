@@ -1,0 +1,3 @@
+#set global $extraManifest = ["recursive-include " + $package + "/static *.*"]
+
+#include $templates_dir + "/python_package/MANIFEST.in_tmpl"

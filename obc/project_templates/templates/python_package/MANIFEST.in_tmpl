@@ -3,3 +3,7 @@ include CHANGES.rst
 include LICENSE.txt
 include README.rst
 include TODO.rst
+
+#for $manifestLine in $getVar("extraManifest", [])
+${manifestLine}
+#end for
