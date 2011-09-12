@@ -1,6 +1,7 @@
 # Compass CSS framework config file
 
 require 'susy'
+require 'modular-scale'
 # Require any additional compass plugins here.
 
 project_type = :stand_alone
