@@ -12,8 +12,8 @@ this project into your Python environment.
 You'll probably need to create a ``src/${package}/settings/local.py`` file
 with some details of your local configuration, including, most likely,
 your database details (SQLite will be used by default).  See
-``src/${package}/settings_local.sample.py`` for a sample that can be
-copied to ``src/${package}/settings_local.py`` and modified.
+``src/${package}/settings/local.sample.py`` for a sample that can be
+copied to ``src/${package}/settings/local.py`` and modified.
 
 Once this configuration is done, you should be able to run
 ``./manage.py syncdb --migrate``, then ``./manage.py runserver`` and
