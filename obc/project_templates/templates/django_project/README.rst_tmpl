@@ -21,9 +21,10 @@ access the site in your browser at ``http://localhost:8000``.
 
 .. _virtualenv: http://www.virtualenv.org
 
-To install the necessary Ruby gems for Compass/Sass development, run
-``bin/install-gems``.  Update ``requirements/gems.txt`` if newer gems
-should be used.
+To install the necessary Ruby gems for Compass/Sass development (only
+necessary if you plan to modify Sass files and re-generate CSS), run
+``bin/install-gems``.  Update ``requirements/gems.txt`` if newer gems should
+be used.
 
 Deployment
 ----------
