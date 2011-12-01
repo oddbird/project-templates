@@ -4,7 +4,7 @@ collected-assets/
 *~
 *.pyc
 .sass-cache/
-${package}/settings/local.py
+src/${package}/settings/local.py
 .livereload
 htmlcov/
 djangodb.sqlite
