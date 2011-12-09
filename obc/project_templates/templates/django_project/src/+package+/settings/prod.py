@@ -10,13 +10,11 @@ DEBUG = False
 TEMPLATE_DEBUG = False
 
 # Causes CSS/JS to be served in a single combined, minified file, with a name
-# based on contents hash (thus can be safely far-futures-expired).  This
-# setting requires the Django server process to have write access to
-# STATIC_ROOT (or, more specifically, a CACHE/ subdirectory of it), as minified
-# combined files are generated on-demand if the underlying files have
-# changed. If static files are hosted off-site, a custom Django file storage
-# handler can be used as well.
-COMPRESS = True
+# based on contents hash (thus can be safely far-futures-expired). With the
+# below two settings, run "python manage.py collectstatic" followed
+# by "python manage.py compress": the contents of ``STATIC_ROOT`` can then be
+# deployed into production.
+COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = True
 
 # Use memcached rather than local-memory cache. See
