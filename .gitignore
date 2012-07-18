@@ -4,3 +4,4 @@ TAGS
 .tox
 .sass-cache/
 *.egg
+*.DS_store
