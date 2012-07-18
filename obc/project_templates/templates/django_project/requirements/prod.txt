@@ -2,4 +2,4 @@
 
 -r base.txt
 
-python-memcached==1.47
+python-memcached==1.48

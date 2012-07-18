@@ -63,7 +63,6 @@ class DjangoProjectTemplate(CurDirTemplate):
     _template_dir = "templates/django_project"
     executable = [
         "bin/install-reqs",
-        "bin/install-gems",
         "bin/test",
         "manage.py",
         ]
