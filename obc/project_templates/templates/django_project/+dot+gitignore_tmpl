@@ -8,3 +8,4 @@ ${package}/settings/local.py
 .livereload
 htmlcov/
 djangodb.sqlite
+__pycache__
