@@ -18,7 +18,7 @@
 
   <footer role="contentinfo">
     <p class="author vcard">
-      <small>copyright &copy; 2011</small>
+      copyright &copy; 2012
       <strong class="fn org">${verbose_name}</strong>
     </p>
   </footer>
